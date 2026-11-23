@@ -1,7 +1,7 @@
 import React from 'react';
 import { CONFIG } from '../config';
 import { AppStage } from '../types';
-import { GraduationCap, ShieldCheck, FileSpreadsheet, ArrowLeft } from 'lucide-react';
+import { ShieldCheck, ArrowLeft } from 'lucide-react';
 
 interface NavbarProps {
   currentStage: AppStage;
@@ -15,25 +15,31 @@ export const Navbar: React.FC<NavbarProps> = ({
   onBackToStudentView,
 }) => {
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 shadow-xs">
+    <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-200/80 shadow-xs">
+      <div className="h-1 w-full bg-gradient-to-r from-red-700 via-amber-400 to-red-700" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-18">
           {/* Sisi Kiri: Identitas Sekolah & Judul */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-blue-700 flex items-center justify-center text-white shadow-xs">
-              <GraduationCap className="w-6 h-6" />
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white border border-amber-200 p-0.5 flex items-center justify-center shadow-xs overflow-hidden shrink-0">
+              <img
+                src={CONFIG.LOGO_URL}
+                alt={`Logo ${CONFIG.SEKOLAH}`}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200">
-                  {CONFIG.KELAS} • {CONFIG.MATA_PELAJARAN}
+                <span className="text-xs font-bold uppercase tracking-wider text-red-800 bg-red-50 px-2 py-0.5 rounded-md border border-red-200">
+                  Kelas {CONFIG.KELAS} • {CONFIG.MATA_PELAJARAN}
                 </span>
                 <span className="hidden sm:inline-block text-xs font-medium text-slate-500">
                   Materi {CONFIG.MATERI}
                 </span>
               </div>
               <h1 id="navbar-app-title" className="text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-tight">
-                Sekolah Dasar
+                {CONFIG.SEKOLAH}
               </h1>
             </div>
           </div>

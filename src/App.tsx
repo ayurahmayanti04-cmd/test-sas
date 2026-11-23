@@ -1,7 +1,7 @@
 /**
  * Aplikasi Website Tes Sumatif
- * SEKOLAH DASAR - JEMBRANA - KELAS VI
- * Mata Pelajaran: MATEMATIKA (TKA)
+ * SD NEGERI 3 DANGINTUKADAYA - JEMBRANA - KELAS 5
+ * Mata Pelajaran: PENDIDIKAN PANCASILA (Sejarah Lahirnya Pancasila & Norma)
  */
 
 import React, { useState, useEffect } from 'react';
@@ -14,8 +14,9 @@ import { Stage2Exam } from './components/Stage2Exam';
 import { Stage3Result } from './components/Stage3Result';
 import { Stage4TeacherPanel } from './components/Stage4TeacherPanel';
 import { TeacherAuthModal } from './components/TeacherAuthModal';
+import pancasilaThemeBg from './assets/images/pancasila_theme_bg_1795412752471.jpg';
 
-const STORAGE_QUESTIONS_KEY = 'sd3_loloan_timur_questions_v2';
+const STORAGE_QUESTIONS_KEY = 'sdn3_dangintukadaya_pancasila_k5_questions_v1';
 const STORAGE_ALLOW_REVIEW_KEY = 'sd3_loloan_timur_allow_review';
 const STORAGE_STRICT_SECURITY_KEY = 'sd3_strict_exam_mode';
 
@@ -165,7 +166,21 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen flex flex-col relative text-slate-900 selection:bg-red-700 selection:text-white">
+      {/* Latar Belakang Tema Pendidikan Pancasila (Batik Kawung, Ornamen Sila, & Pita Merah Putih) */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-[#FDFBF7]"
+      >
+        <img
+          src={pancasilaThemeBg}
+          alt=""
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover object-bottom opacity-90"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/55 via-[#FDFBF7]/25 to-[#FDFBF7]/15" />
+      </div>
+
       {/* Header Navigasi Atas */}
       <Navbar
         currentStage={currentStage}
@@ -219,9 +234,9 @@ export default function App() {
       </main>
 
       {/* Footer Resmi */}
-      <footer className="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+      <footer className="bg-white/90 backdrop-blur-sm border-t border-amber-200/70 py-6 text-center text-xs text-slate-600">
         <div className="max-w-7xl mx-auto px-4 space-y-1.5">
-          <p id="footer-developer-credit" className="font-semibold text-slate-700">
+          <p id="footer-developer-credit" className="font-semibold text-slate-800">
             Web Developer-susilo fitri yatmoko
           </p>
           <p>

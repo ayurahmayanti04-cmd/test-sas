@@ -4,12 +4,13 @@
  */
 
 export const CONFIG = {
-  SEKOLAH: "SEKOLAH DASAR",
+  SEKOLAH: "SD NEGERI 3 DANGINTUKADAYA",
+  LOGO_URL: "/assets/aistudio/LOGO_fc9988a7.jpg",
   ALAMAT_SEKOLAH: "Jembrana",
   KOTA: "Jembrana",
-  KELAS: "VI",
-  MATA_PELAJARAN: "MATEMATIKA",
-  MATERI: "TKA (Tes Kemampuan Akademik)",
+  KELAS: "5",
+  MATA_PELAJARAN: "PENDIDIKAN PANCASILA",
+  MATERI: "Sejarah Lahirnya Pancasila & Norma",
   GURU: "........................................",
   NIP_GURU: "........................................",
   KEPALA_SEKOLAH: "........................................",

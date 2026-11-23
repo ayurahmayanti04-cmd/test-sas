@@ -21,6 +21,7 @@ export const QuestionEditorModal: React.FC<QuestionEditorModalProps> = ({
   const [topic, setTopic] = useState(question.topic);
   const [difficulty, setDifficulty] = useState<Difficulty>(question.difficulty);
   const [explanation, setExplanation] = useState(question.explanation);
+  const [imageCaption, setImageCaption] = useState(question.imageCaption || '');
 
   // State untuk options (PG & PGK)
   const [options, setOptions] = useState<OptionItem[]>(
@@ -73,6 +74,7 @@ export const QuestionEditorModal: React.FC<QuestionEditorModalProps> = ({
       topic: topic.trim(),
       difficulty,
       explanation: explanation.trim(),
+      imageCaption: question.image ? imageCaption.trim() : undefined,
       options: question.type !== 'pgk_kategori' ? options : undefined,
       statements: question.type === 'pgk_kategori' ? statements : undefined,
       correctAnswer: question.type !== 'pgk_kategori' ? correctAnswer : undefined,
@@ -138,6 +140,28 @@ export const QuestionEditorModal: React.FC<QuestionEditorModalProps> = ({
               </select>
             </div>
           </div>
+
+          {/* Gambar Soal (jika tersedia) */}
+          {question.image && (
+            <div className="p-3 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+              <label className="block text-xs font-bold text-slate-700">
+                Gambar Ilustrasi Soal
+              </label>
+              <img
+                src={question.image}
+                alt={imageCaption || `Ilustrasi Soal ${question.id}`}
+                referrerPolicy="no-referrer"
+                className="max-h-40 object-contain rounded-lg border border-slate-200 bg-white mx-auto"
+              />
+              <input
+                type="text"
+                value={imageCaption}
+                onChange={(e) => setImageCaption(e.target.value)}
+                placeholder="Keterangan gambar (opsional)..."
+                className="w-full px-3 py-1.5 rounded-lg border border-slate-300 text-xs bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              />
+            </div>
+          )}
 
           {/* Teks Pertanyaan Soal */}
           <div>

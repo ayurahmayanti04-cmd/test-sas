@@ -783,7 +783,7 @@ export const Stage4TeacherPanel: React.FC<Stage4TeacherPanelProps> = ({
                 className="w-full px-3 py-2 text-xs rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none font-medium"
               >
                 <option value="Semua">Semua Kelas</option>
-                <option value="VI">Kelas VI</option>
+                <option value={CONFIG.KELAS}>Kelas {CONFIG.KELAS}</option>
               </select>
             </div>
 
@@ -1182,7 +1182,7 @@ export const Stage4TeacherPanel: React.FC<Stage4TeacherPanelProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-slate-100 gap-3">
             <div>
               <h3 className="text-base font-bold text-slate-900">
-                Struktur &amp; Bank Soal Matematika TKA ({questions.length} Butir)
+                Struktur &amp; Bank Soal {CONFIG.MATA_PELAJARAN} ({questions.length} Butir)
               </h3>
               <p className="text-xs text-slate-500">
                 18 Soal Pilihan Ganda, 3 Soal Pilihan Ganda Kompleks, 9 Soal PGK Kategori
@@ -1258,6 +1258,22 @@ export const Stage4TeacherPanel: React.FC<Stage4TeacherPanelProps> = ({
                     </button>
                   </div>
                 </div>
+
+                {q.image && (
+                  <div className="rounded-lg overflow-hidden border border-slate-200 bg-white p-2 max-w-md">
+                    <img
+                      src={q.image}
+                      alt={q.imageCaption || `Ilustrasi Soal ${q.id}`}
+                      referrerPolicy="no-referrer"
+                      className="max-h-44 object-contain mx-auto rounded"
+                    />
+                    {q.imageCaption && (
+                      <p className="mt-1 text-[11px] text-slate-500 text-center italic">
+                        {q.imageCaption}
+                      </p>
+                    )}
+                  </div>
+                )}
 
                 <p className="text-xs sm:text-sm text-slate-900 font-medium whitespace-pre-line">
                   {q.text}

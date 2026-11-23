@@ -199,8 +199,8 @@ export function downloadStudentResultPDF(result: ExamResult): void {
   doc.setFont('helvetica', 'italic');
   doc.setFontSize(9);
   const note = isPass
-    ? 'Selamat atas pencapaian yang memuaskan. Tingkatkan terus semangat belajar dan ketelitian dalam menyelesaikan soal matematika.'
-    : 'Perlu bimbingan dan pengulangan materi terutama pada konsep soal kompleks dan pemecahan masalah (remedial). Tetap semangat belajar.';
+    ? 'Selamat atas pencapaian yang memuaskan. Tingkatkan terus semangat belajar dan pengamalan nilai-nilai Pancasila serta norma dalam kehidupan sehari-hari.'
+    : 'Perlu bimbingan dan pengulangan materi terutama pada pemahaman sejarah lahirnya Pancasila dan penerapan norma dalam kehidupan sehari-hari (remedial). Tetap semangat belajar.';
   doc.text(note, 15, y, { maxWidth: pageWidth - 30 });
   y += 16;
 
@@ -217,10 +217,10 @@ export function downloadStudentResultPDF(result: ExamResult): void {
   doc.text('Mengetahui,', colLeft, ttdY);
   doc.text('Orang Tua / Wali Siswa,', colLeft, ttdY + 5);
 
-  // Kolom Kanan: Guru Kelas VI
+  // Kolom Kanan: Guru Kelas
   const tglFormatted = formatIndonesianDate();
   doc.text(`Jembrana, ${tglFormatted}`, colRight, ttdY);
-  doc.text('Guru Mata Pelajaran / Kelas VI,', colRight, ttdY + 5);
+  doc.text(`Guru Mata Pelajaran / Kelas ${CONFIG.KELAS},`, colRight, ttdY + 5);
 
   // Area tanda tangan (spasi vertikal)
   const lineY = ttdY + 27;
@@ -269,7 +269,7 @@ export function downloadExamQuestionsPDF(questions: Question[]): void {
     doc.setFontSize(8);
     doc.setTextColor(120, 120, 120);
     doc.text(
-      `${CONFIG.SEKOLAH} | Naskah Soal Tes Sumatif Matematika Kelas VI`,
+      `${CONFIG.SEKOLAH} | Naskah Soal Tes Sumatif ${CONFIG.MATA_PELAJARAN} Kelas ${CONFIG.KELAS}`,
       pageWidth / 2,
       9,
       { align: 'center' }
@@ -336,6 +336,22 @@ export function downloadExamQuestionsPDF(questions: Question[]): void {
     doc.setTextColor(0, 0, 0);
     y += 5;
 
+    // Keterangan gambar ilustrasi jika ada
+    if (q.image) {
+      doc.setFont('helvetica', 'italic');
+      doc.setFontSize(8.5);
+      doc.setTextColor(71, 85, 105);
+      const capLines = doc.splitTextToSize(
+        `[Gambar Ilustrasi: ${q.imageCaption || 'Tersedia pada tampilan ujian digital'}]`,
+        pageWidth - 32
+      );
+      checkPageBreak(capLines.length * 4 + 4);
+      doc.text(capLines, 16, y);
+      y += capLines.length * 4 + 1.5;
+      doc.setTextColor(0, 0, 0);
+      doc.setFontSize(9.5);
+    }
+
     // Teks Soal
     doc.setFont('helvetica', 'normal');
     const textLines = doc.splitTextToSize(q.text, pageWidth - 32);
@@ -369,7 +385,7 @@ export function downloadExamQuestionsPDF(questions: Question[]): void {
     }
   });
 
-  doc.save(`Naskah_Soal_Matematika_Kelas_VI_${CONFIG.SEKOLAH.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
+  doc.save(`Naskah_Soal_Pendidikan_Pancasila_Kelas_${CONFIG.KELAS}_${CONFIG.SEKOLAH.replace(/[^a-zA-Z0-9]/g, '_')}.pdf`);
 }
 
 /**
@@ -692,7 +708,7 @@ export function downloadResultsRecapPDF(results: ExamResult[]): void {
     });
   }
 
-  doc.save(`Rekap_Nilai_Tes_Sumatif_Matematika_Kelas_${CONFIG.KELAS}.pdf`);
+  doc.save(`Rekap_Nilai_Tes_Sumatif_Pendidikan_Pancasila_Kelas_${CONFIG.KELAS}.pdf`);
 }
 
 /**
@@ -946,7 +962,7 @@ export function downloadKisiKisiPDF(questions: Question[]): void {
     });
   }
 
-  doc.save(`Kisi_Kisi_Soal_Matematika_Kelas_${CONFIG.KELAS}.pdf`);
+  doc.save(`Kisi_Kisi_Soal_Pendidikan_Pancasila_Kelas_${CONFIG.KELAS}.pdf`);
 }
 
 /**
@@ -1267,6 +1283,6 @@ export function downloadAnalisisButirPDF(results: ExamResult[], questions: Quest
     });
   }
 
-  doc.save(`Analisis_Butir_Soal_Matematika_Kelas_${CONFIG.KELAS}.pdf`);
+  doc.save(`Analisis_Butir_Soal_Pendidikan_Pancasila_Kelas_${CONFIG.KELAS}.pdf`);
 }
 

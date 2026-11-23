@@ -2,7 +2,8 @@ import { Question, QuestionBlueprint, CognitiveLevel, Difficulty } from '../type
 
 /**
  * Data Acuan Matriks Kisi-Kisi Penulisan Soal Tes Sumatif
- * Kurikulum Merdeka - Fase C (Kelas VI) Mata Pelajaran Matematika
+ * Kurikulum Merdeka - Fase C (Kelas 5) Mata Pelajaran Pendidikan Pancasila
+ * Lingkup Materi: Sejarah Lahirnya Pancasila & Norma
  */
 
 export interface BlueprintDefinition {
@@ -13,275 +14,275 @@ export interface BlueprintDefinition {
   bobotSkor: number;
 }
 
-// Peta acuan default 30 butir soal Kurikulum Merdeka
+// Peta acuan default 30 butir soal Pendidikan Pancasila Kelas 5 Kurikulum Merdeka
 export const DEFAULT_BLUEPRINT_MAP: Record<number, BlueprintDefinition> = {
   1: {
-    elemen: 'Bilangan',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah operasi hitung bilangan bulat negatif dan positif dalam kehidupan sehari-hari.',
+      'Peserta didik dapat memahami kronologi sejarah pembentukan lembaga perumus dasar negara Indonesia.',
     indikatorSoal:
-      'Disajikan narasi perubahan suhu es yang dipanaskan secara berkala, peserta didik dapat menentukan suhu akhir es setelah waktu pemanasan tertentu.',
+      'Disajikan gambar ilustrasi sidang tahun 1945 dan deskripsi ketua sidang, peserta didik dapat mengidentifikasi nama lembaga BPUPKI secara tepat.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   2: {
-    elemen: 'Bilangan',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah penalaran yang melibatkan operasi hitung campuran pecahan dan bilangan cacah.',
+      'Peserta didik dapat mengidentifikasi tokoh-tokoh perumus dasar negara pada sidang pertama BPUPKI.',
     indikatorSoal:
-      'Disajikan cerita kontekstual panen beras (kuintal) yang dijual dan dibagi rata ke beberapa tetangga, peserta didik dapat menghitung berat beras yang diterima tiap orang dalam satuan kilogram.',
-    levelKognitif: 'L2',
+      'Disajikan narasi sidang pertama BPUPKI (29 Mei–1 Juni 1945), peserta didik dapat menentukan tiga tokoh penyampai usulan dasar negara secara berurutan.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   3: {
-    elemen: 'Bilangan',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat mengaplikasikan konsep Faktor Persekutuan Terbesar (FPB) untuk menyelesaikan permasalahan pembagian barang secara merata.',
+      'Peserta didik dapat memahami peristiwa bersejarah lahirnya istilah Pancasila pada 1 Juni 1945.',
     indikatorSoal:
-      'Disajikan data tiga jenis perlengkapan belajar yang akan dibagikan sama banyak kepada siswa berprestasi, peserta didik dapat menentukan jumlah siswa terbanyak penerima dan jumlah pensil yang didapat masing-masing siswa.',
-    levelKognitif: 'L2',
+      'Disajikan narasi pidato Ir. Soekarno tanggal 1 Juni 1945, peserta didik dapat menentukan peringatan nasional yang dirayakan pada tanggal tersebut.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   4: {
-    elemen: 'Bilangan',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menerapkan konsep Kelipatan Persekutuan Terkecil (KPK) dalam menentukan jadwal atau waktu kejadian bersamaan.',
+      'Peserta didik dapat menjelaskan arti kata Pancasila secara etimologis.',
     indikatorSoal:
-      'Disajikan interval waktu berbunyinya tiga lonceng pos kamling pada pukul tertentu, peserta didik dapat menentukan waktu saat ketiga lonceng berbunyi bersamaan kembali untuk kedua kalinya.',
+      'Disajikan keterangan asal bahasa Sanskerta kata "panca" dan "sila", peserta didik dapat menentukan arti kedua kata tersebut dengan benar.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   5: {
-    elemen: 'Aljabar',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat memahami konsep rasio, perbandingan, dan skala pada peta atau denah.',
+      'Peserta didik dapat menghubungkan prinsip dasar negara usulan Ir. Soekarno dengan praktik musyawarah.',
     indikatorSoal:
-      'Disajikan jarak dua kota pada peta dan skala tertentu, peserta didik dapat menghitung jarak sebenarnya antara kedua kota tersebut dalam satuan kilometer.',
-    levelKognitif: 'L1',
+      'Disajikan informasi tentang prinsip "Mufakat atau Demokrasi" dalam pidato 1 Juni 1945, peserta didik dapat menentukan cara pengambilan keputusan yang sesuai.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   6: {
-    elemen: 'Aljabar',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah proporsi dan perbandingan senilai yang berkaitan dengan selisih dan jumlah nilai.',
+      'Peserta didik dapat memahami peran Panitia Sembilan dalam perumusan dasar negara.',
     indikatorSoal:
-      'Disajikan perbandingan umur dua orang dan selisih umur mereka, peserta didik dapat menghitung jumlah umur kedua orang tersebut seluruhnya.',
+      'Disajikan gambar ilustrasi rapat Panitia Sembilan pada 22 Juni 1945, peserta didik dapat mengidentifikasi nama naskah hasil rumusan panitia tersebut (Piagam Jakarta).',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   7: {
-    elemen: 'Aljabar',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis permasalahan gerak lurus beraturan (kecepatan rata-rata, jarak, dan waktu) untuk kasus berpapasan.',
+      'Peserta didik dapat mengidentifikasi tanggal pengesahan Pancasila sebagai dasar negara dalam Pembukaan UUD 1945.',
     indikatorSoal:
-      'Disajikan jarak dua kota, waktu keberangkatan yang sama, dan kecepatan dua kendaraan yang berpapasan, peserta didik dapat menganalisis dan menentukan pukul berapa kedua kendaraan saling berpapasan.',
-    levelKognitif: 'L3',
-    bobotSkor: 1,
-  },
-  8: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah yang melibatkan hubungan antara volume bangun ruang, debit aliran zat cair, dan waktu pengisian.',
-    indikatorSoal:
-      'Disajikan ukuran bak penampungan air berbentuk balok dan debit kran air pengisi, peserta didik dapat menghitung waktu yang dibutuhkan untuk mengisi bak hingga penuh.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  9: {
-    elemen: 'Geometri',
-    tujuanPembelajaran:
-      'Peserta didik dapat menghitung keliling lingkaran dan mengaplikasikannya dalam pemecahan masalah lingkungan sekitar.',
-    indikatorSoal:
-      'Disajikan diameter sebuah taman berbentuk lingkaran yang akan dipasangi lampu penerangan dengan jarak tertentu, peserta didik dapat menentukan jumlah lampu yang dibutuhkan.',
+      'Disajikan keterangan peran PPKI dalam pengesahan UUD 1945, peserta didik dapat menentukan tanggal pengesahan rumusan resmi Pancasila.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
-  10: {
-    elemen: 'Geometri',
+  8: {
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menghitung luas gabungan bangun datar (persegi panjang dan lingkaran).',
+      'Peserta didik dapat menganalisis alasan perubahan rumusan sila pertama Piagam Jakarta demi persatuan bangsa.',
     indikatorSoal:
-      'Disajikan gambar bangun datar gabungan antara persegi panjang dan setengah lingkaran berimpit, peserta didik dapat menghitung luas gabungan bangun tersebut.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  11: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis dan menghitung volume bangun ruang tabung serta konversi volume ke satuan liter.',
-    indikatorSoal:
-      'Disajikan dimensi drum penampung minyak berbentuk tabung yang telah terisi sebagian (pecahan), peserta didik dapat menganalisis sisa volume minyak yang dibutuhkan hingga penuh dalam satuan liter.',
+      'Disajikan informasi perubahan sila pertama menjadi "Ketuhanan Yang Maha Esa" pada 18 Agustus 1945, peserta didik dapat menganalisis tujuan utama kesepakatan tersebut.',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
-  12: {
-    elemen: 'Geometri',
+  9: {
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menghitung luas permukaan bangun ruang kubus dalam konteks pemecahan masalah sehari-hari.',
+      'Peserta didik dapat meneladani sikap para tokoh perumus Pancasila dalam kehidupan sehari-hari.',
     indikatorSoal:
-      'Disajikan ukuran rusuk sebuah kotak kado berbentuk kubus, peserta didik dapat menentukan luas minimal kertas kado yang dibutuhkan untuk menutup seluruh permukaannya.',
+      'Disajikan narasi perbedaan pendapat saat perumusan dasar negara, peserta didik dapat menentukan nilai keteladanan para pendiri bangsa.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  10: {
+    elemen: 'UUD NRI Tahun 1945',
+    tujuanPembelajaran:
+      'Peserta didik dapat menjelaskan pengertian norma dalam kehidupan bermasyarakat.',
+    indikatorSoal:
+      'Disajikan definisi aturan yang mengikat warga sebagai pedoman tingkah laku, peserta didik dapat mengidentifikasi istilah norma secara tepat.',
+    levelKognitif: 'L1',
+    bobotSkor: 1,
+  },
+  11: {
+    elemen: 'UUD NRI Tahun 1945',
+    tujuanPembelajaran:
+      'Peserta didik dapat membedakan jenis-jenis norma berdasarkan sumbernya.',
+    indikatorSoal:
+      'Disajikan deskripsi norma yang bersumber dari wahyu Tuhan Yang Maha Esa melalui kitab suci, peserta didik dapat menentukan nama norma tersebut.',
+    levelKognitif: 'L1',
+    bobotSkor: 1,
+  },
+  12: {
+    elemen: 'UUD NRI Tahun 1945',
+    tujuanPembelajaran:
+      'Peserta didik dapat mengidentifikasi contoh penerapan norma kesopanan di lingkungan sekolah.',
+    indikatorSoal:
+      'Disajikan gambar ilustrasi siswa bersalaman dengan guru di gerbang sekolah, peserta didik dapat menentukan jenis norma yang diterapkan.',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
   13: {
-    elemen: 'Analisis Data dan Peluang',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan nilai rata-rata (mean) dari sekumpulan data tunggal.',
+      'Peserta didik dapat mengidentifikasi perilaku yang sesuai dengan norma kesusilaan.',
     indikatorSoal:
-      'Disajikan sekumpulan data perolehan nilai ulangan harian siswa, peserta didik dapat menghitung nilai rata-rata (mean) dari data tersebut.',
-    levelKognitif: 'L1',
+      'Disajikan studi kasus siswa yang memilih bersikap jujur tidak menyontek saat ulangan, peserta didik dapat menentukan jenis norma dan sumbernya.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   14: {
-    elemen: 'Analisis Data dan Peluang',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis data tunggal untuk menentukan nilai median (nilai tengah) dan modus.',
+      'Peserta didik dapat menganalisis ciri khas norma hukum dibandingkan norma lainnya.',
     indikatorSoal:
-      'Disajikan data berat badan sejumlah siswa peserta cerdas cermat yang belum berurutan, peserta didik dapat menentukan nilai median dan modus secara tepat.',
+      'Disajikan pernyataan tentang sifat memaksa dan sanksi tegas norma hukum, peserta didik dapat menentukan alasan kekuatan mengikat norma hukum.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   15: {
-    elemen: 'Aljabar',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan masalah aritmatika sosial yang berkaitan dengan persentase diskon (potongan harga).',
+      'Peserta didik dapat mengidentifikasi bentuk sanksi atas pelanggaran norma kesopanan.',
     indikatorSoal:
-      'Disajikan harga barang sebelum diskon dan persentase potongan harga belanja pendidikan, peserta didik dapat menghitung jumlah uang yang harus dibayar oleh pembeli.',
-    levelKognitif: 'L1',
+      'Disajikan kasus anak yang mendapat teguran dan dijauhi karena berbicara kasar, peserta didik dapat menentukan norma yang dilanggar.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   16: {
-    elemen: 'Analisis Data dan Peluang',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menyajikan dan menafsirkan data dalam bentuk diagram lingkaran.',
+      'Peserta didik dapat menjelaskan hubungan keseimbangan hak dan kewajiban dalam mematuhi aturan sekolah.',
     indikatorSoal:
-      'Disajikan diagram lingkaran persentase pilihan kegiatan ekstrakurikuler beserta jumlah total siswa, peserta didik dapat menghitung banyak siswa yang memilih ekstrakurikuler tertentu.',
+      'Disajikan konteks pelaksanaan piket kebersihan kelas 5, peserta didik dapat menentukan keterkaitan antara kewajiban piket dan hak belajar yang nyaman.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   17: {
-    elemen: 'Bilangan',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menentukan akar pangkat tiga dari bilangan kubik yang berkaitan dengan volume kubus.',
+      'Peserta didik dapat menerapkan norma kesopanan di lingkungan keluarga.',
     indikatorSoal:
-      'Disajikan volume bak penampungan air berbentuk kubus, peserta didik dapat menentukan panjang rusuk bagian dalam bak tersebut.',
-    levelKognitif: 'L2',
+      'Disajikan empat pilihan tindakan di rumah, peserta didik dapat menentukan contoh penerapan norma kesopanan di keluarga.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   18: {
-    elemen: 'Pengukuran',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat mengonversi satuan kecepatan dari km/menit ke meter per detik (m/s).',
+      'Peserta didik dapat menganalisis dampak apabila masyarakat mengabaikan norma yang berlaku.',
     indikatorSoal:
-      'Disajikan jarak tempuh dan waktu seorang pelari maraton cilik, peserta didik dapat menghitung dan mengonversi kecepatan rata-rata ke satuan meter/detik.',
-    levelKognitif: 'L2',
+      'Disajikan kondisi masyarakat yang tidak mematuhi kesepakatan norma bersama, peserta didik dapat memprediksi akibat yang timbul.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   19: {
-    elemen: 'Geometri',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat mengidentifikasi dan membedakan sifat-sifat bangun datar layang-layang melalui pilihan berganda kompleks.',
+      'Peserta didik dapat memverifikasi fakta sejarah perumusan dan pengesahan Pancasila.',
     indikatorSoal:
-      'Disajikan tiga deskripsi sifat geometris bangun datar layang-layang, peserta didik dapat memilih semua pernyataan yang benar (lebih dari satu jawaban benar).',
+      'Disajikan tiga pernyataan tentang BPUPKI, Panitia Sembilan, dan PPKI, peserta didik dapat memilih dua pernyataan yang benar.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   20: {
-    elemen: 'Geometri',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis luas, keliling, dan estimasi nilai ekonomis lahan kebun berbentuk bangun datar.',
+      'Peserta didik dapat mengidentifikasi contoh kepatuhan norma hukum lalu lintas melalui stimulus visual.',
     indikatorSoal:
-      'Disajikan ukuran kebun berbentuk persegi panjang dan harga jual per meter persegi, peserta didik dapat mengevaluasi dan memilih semua pernyataan yang bernilai benar.',
-    levelKognitif: 'L3',
+      'Disajikan gambar suasana ketertiban lalu lintas dan tiga opsi perilaku, peserta didik dapat memilih dua perilaku yang mematuhi norma hukum.',
+    levelKognitif: 'L2',
     bobotSkor: 1,
   },
   21: {
-    elemen: 'Bilangan',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menerapkan operasi hitung campuran bilangan desimal dan satuan berat dalam belanja sehari-hari.',
+      'Peserta didik dapat menentukan contoh penerapan norma kesopanan dan kesusilaan di sekolah.',
     indikatorSoal:
-      'Disajikan data belanja kebutuhan pokok beras dan gula pasir, peserta didik dapat memverifikasi kebenaran hitungan berat tiap jenis barang dan total berat belanjaan.',
+      'Disajikan tiga opsi perilaku siswa di sekolah, peserta didik dapat memilih dua perilaku yang mencerminkan norma kesopanan dan kesusilaan.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   22: {
-    elemen: 'Aljabar',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis konsep aritmatika sosial mengenai bruto, neto, tara, modal, harga jual, dan keuntungan.',
+      'Peserta didik dapat mengevaluasi fakta sejarah sidang pertama BPUPKI.',
     indikatorSoal:
-      'Disajikan narasi pembelian buah dalam keranjang berkategori bruto dan tara, peserta didik dapat menentukan nilai kebenaran (Benar/Salah) pada 3 pernyataan terkait neto, modal, dan laba.',
-    levelKognitif: 'L3',
+      'Disajikan tiga pernyataan tentang jadwal, ketua, dan tokoh pengusul dasar negara pada sidang BPUPKI I, peserta didik dapat menentukan Benar atau Salah.',
+    levelKognitif: 'L1',
     bobotSkor: 1,
   },
   23: {
-    elemen: 'Analisis Data dan Peluang',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis tabel distribusi frekuensi data tunggal dan menghubungkannya dengan kriteria ketercapaian (KKTP).',
+      'Peserta didik dapat menganalisis peran Panitia Sembilan dan makna persatuan pada perubahan sila pertama.',
     indikatorSoal:
-      'Disajikan data frekuensi nilai ulangan dan batas KKTP sekolah, peserta didik dapat menentukan nilai kebenaran (Benar/Salah) pada 3 pernyataan terkait modus, jumlah siswa tuntas, dan persentase remedial.',
-    levelKognitif: 'L2',
+      'Disajikan tiga pernyataan tentang komposisi Panitia Sembilan dan perubahan sila pertama 18 Agustus 1945, peserta didik dapat menentukan Benar atau Salah.',
+    levelKognitif: 'L3',
     bobotSkor: 1,
   },
   24: {
-    elemen: 'Pengukuran',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis volume balok dan kapasitas penampungan air dalam satuan liter.',
+      'Peserta didik dapat mengaitkan keteladanan perumus Pancasila dengan perilaku siswa di kelas.',
     indikatorSoal:
-      'Disajikan dimensi bak penampungan air balok dan kondisi keterisian 3/4 kapasitas, peserta didik dapat menentukan kebenaran (Benar/Salah) untuk volume penuh, volume isi, dan volume air yang perlu ditambahkan.',
+      'Disajikan tiga deskripsi sikap siswa dalam kerja kelompok dan gotong royong, peserta didik dapat menentukan kesesuaiannya dengan teladan perumus Pancasila (Benar/Salah).',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   25: {
-    elemen: 'Geometri',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menerapkan rumus keliling dan luas lingkaran pada objek kontekstual meja hias bundar.',
+      'Peserta didik dapat menganalisis keterkaitan adab bermusyawarah (norma kesopanan) dan sila ke-4 Pancasila.',
     indikatorSoal:
-      'Disajikan diameter meja bundar, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) untuk panjang jari-jari, panjang renda hias keliling, dan luas permukaan kaca penutup.',
+      'Disajikan gambar musyawarah siswa kelas 5 dan tiga pernyataan, peserta didik dapat menentukan nilai kebenaran (Benar/Salah) terkait tata tertib musyawarah.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   26: {
-    elemen: 'Aljabar',
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis skala denah untuk menentukan ukuran panjang, lebar, dan luas sebenarnya.',
+      'Peserta didik dapat mengklasifikasikan macam-macam norma beserta sumbernya.',
     indikatorSoal:
-      'Disajikan denah lapangan upacara sekolah dengan skala 1 : 400, peserta didik dapat menilai kebenaran (Benar/Salah) dari pernyataan panjang sebenarnya, lebar sebenarnya, dan luas sebenarnya.',
-    levelKognitif: 'L2',
-    bobotSkor: 1,
-  },
-  27: {
-    elemen: 'Pengukuran',
-    tujuanPembelajaran:
-      'Peserta didik dapat menganalisis permasalahan jarak, waktu tempuh total, waktu istirahat, dan kecepatan gerak murni bus pariwisata.',
-    indikatorSoal:
-      'Disajikan jadwal keberangkatan bus karya wisata, waktu tiba, jarak tempuh, dan durasi istirahat, peserta didik dapat memverifikasi nilai kebenaran (Benar/Salah) pada total waktu, waktu gerak murni, dan kecepatan rata-rata saat melaju.',
-    levelKognitif: 'L3',
-    bobotSkor: 1,
-  },
-  28: {
-    elemen: 'Bilangan',
-    tujuanPembelajaran:
-      'Peserta didik dapat menyelesaikan operasi persentase dan pecahan terhadap kuantitas barang persediaan awal.',
-    indikatorSoal:
-      'Disajikan persediaan awal buku tulis di koperasi dan data penjualan hari Senin (persen) dan Selasa (pecahan), peserta didik dapat menentukan kebenaran (Benar/Salah) dari 3 pernyataan penjualan dan sisa stok.',
+      'Disajikan tiga pernyataan mengenai sumber norma agama, kesusilaan, dan hukum, peserta didik dapat menilai kebenaran setiap pernyataan (Benar/Salah).',
     levelKognitif: 'L1',
     bobotSkor: 1,
   },
-  29: {
-    elemen: 'Bilangan',
+  27: {
+    elemen: 'UUD NRI Tahun 1945',
     tujuanPembelajaran:
-      'Peserta didik dapat mengaplikasikan FPB dalam menentukan paket hadiah dan rincian isi barang per regu penerima.',
+      'Peserta didik dapat membedakan sanksi yang timbul akibat pelanggaran berbagai jenis norma.',
     indikatorSoal:
-      'Disajikan jumlah tiga perlengkapan hadiah lomba kebersihan kelas, peserta didik dapat mengevaluasi kebenaran (Benar/Salah) nilai FPB, banyak regu terbanyak penerima, dan komposisi isi barang per regu.',
+      'Disajikan tiga pernyataan tentang sanksi norma kesusilaan, hukum, dan kesopanan, peserta didik dapat menentukan Benar atau Salah.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  28: {
+    elemen: 'UUD NRI Tahun 1945',
+    tujuanPembelajaran:
+      'Peserta didik dapat menilai penerapan norma dalam kehidupan keluarga dan masyarakat sekitar.',
+    indikatorSoal:
+      'Disajikan tiga contoh perilaku sehari-hari di rumah dan lingkungan warga, peserta didik dapat menentukan Benar atau Salah.',
+    levelKognitif: 'L2',
+    bobotSkor: 1,
+  },
+  29: {
+    elemen: 'UUD NRI Tahun 1945',
+    tujuanPembelajaran:
+      'Peserta didik dapat memahami keseimbangan pelaksanaan kewajiban dan hak siswa sesuai aturan sekolah.',
+    indikatorSoal:
+      'Disajikan tiga pernyataan tentang hak menerima pembelajaran serta kewajiban menaati tata tertib sekolah, peserta didik dapat menentukan Benar atau Salah.',
     levelKognitif: 'L2',
     bobotSkor: 1,
   },
   30: {
-    elemen: 'Geometri',
+    elemen: 'Pancasila',
     tujuanPembelajaran:
-      'Peserta didik dapat menganalisis koordinat Kartesius 4 titik untuk mengidentifikasi bentuk bangun datar, keliling, dan luas.',
+      'Peserta didik dapat menyimpulkan peran norma dan nilai Pancasila dalam menjaga ketertiban dan kerukunan bangsa.',
     indikatorSoal:
-      'Disajikan 4 titik koordinat bidang Kartesius yang saling dihubungkan, peserta didik dapat menganalisis dan menentukan kebenaran (Benar/Salah) dari jenis bangun datar yang terbentuk, keliling, dan luasnya.',
+      'Disajikan tiga pernyataan reflektif mengenai kesadaran mematuhi norma dan kedudukan Pancasila, peserta didik dapat menentukan Benar atau Salah.',
     levelKognitif: 'L3',
     bobotSkor: 1,
   },
@@ -349,20 +350,16 @@ export function formatCorrectAnswer(q: Question): string {
 export function getQuestionBlueprint(q: Question, index: number): QuestionBlueprint {
   const def = DEFAULT_BLUEPRINT_MAP[q.id];
 
-  // Gunakan data dari definisi atau field internal question, atau inferensi logis
-  const elemen =
-    q.elemen ||
-    (def ? def.elemen : inferElemenFromTopic(q.topic));
+  const elemen = q.elemen || (def ? def.elemen : inferElemenFromTopic(q.topic));
 
   const levelKognitif: CognitiveLevel =
-    q.levelKognitif ||
-    (def ? def.levelKognitif : inferLevelFromDifficulty(q.difficulty));
+    q.levelKognitif || (def ? def.levelKognitif : inferLevelFromDifficulty(q.difficulty));
 
   const tujuanPembelajaran =
     q.tujuanPembelajaran ||
     (def
       ? def.tujuanPembelajaran
-      : `Peserta didik mampu menerapkan konsep materi ${q.topic} dalam menyelesaikan permasalahan matematika.`);
+      : `Peserta didik mampu memahami dan menerapkan konsep materi ${q.topic} dalam kehidupan sehari-hari.`);
 
   const indikatorSoal =
     q.indikatorSoal ||
@@ -390,22 +387,19 @@ export function getQuestionBlueprint(q: Question, index: number): QuestionBluepr
 
 function inferElemenFromTopic(topic: string): string {
   const t = topic.toLowerCase();
-  if (t.includes('bilangan') || t.includes('pecahan') || t.includes('fpb') || t.includes('kpk') || t.includes('pangkat')) {
-    return 'Bilangan';
+  if (
+    t.includes('norma') ||
+    t.includes('aturan') ||
+    t.includes('hukum') ||
+    t.includes('kesopanan') ||
+    t.includes('kesusilaan') ||
+    t.includes('hak') ||
+    t.includes('kewajiban') ||
+    t.includes('uud')
+  ) {
+    return 'UUD NRI Tahun 1945';
   }
-  if (t.includes('lingkaran') || t.includes('bangun datar') || t.includes('kubus') || t.includes('geometri') || t.includes('layang')) {
-    return 'Geometri';
-  }
-  if (t.includes('debit') || t.includes('volume') || t.includes('kecepatan') || t.includes('jarak')) {
-    return 'Pengukuran';
-  }
-  if (t.includes('skala') || t.includes('perbandingan') || t.includes('diskon') || t.includes('bruto') || t.includes('aritmatika')) {
-    return 'Aljabar';
-  }
-  if (t.includes('statistika') || t.includes('diagram') || t.includes('mean') || t.includes('modus') || t.includes('median')) {
-    return 'Analisis Data dan Peluang';
-  }
-  return 'Bilangan';
+  return 'Pancasila';
 }
 
 function inferLevelFromDifficulty(diff: Difficulty): CognitiveLevel {
@@ -421,21 +415,14 @@ export function getBlueprintStatistics(questions: Question[]) {
   const total = questions.length;
   const blueprints = questions.map((q, idx) => getQuestionBlueprint(q, idx));
 
-  // Distribusi Elemen
   const elemenCountMap: Record<string, number> = {};
-  // Distribusi Level Kognitif
   const levelCountMap: Record<CognitiveLevel, number> = { L1: 0, L2: 0, L3: 0 };
-  // Distribusi Tingkat Kesukaran
   const diffCountMap: Record<Difficulty, number> = { Mudah: 0, Sedang: 0, Sukar: 0 };
-  // Distribusi Bentuk Soal
   const typeCountMap: Record<string, number> = { pg: 0, pgk: 0, pgk_kategori: 0 };
 
   blueprints.forEach((bp, idx) => {
-    // Elemen
     elemenCountMap[bp.elemen] = (elemenCountMap[bp.elemen] || 0) + 1;
-    // Level
     levelCountMap[bp.levelKognitif] = (levelCountMap[bp.levelKognitif] || 0) + 1;
-    // Diff
     const q = questions[idx];
     if (q) {
       diffCountMap[q.difficulty] = (diffCountMap[q.difficulty] || 0) + 1;
